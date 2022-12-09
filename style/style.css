@@ -54,9 +54,9 @@ img {
 }
 
 .description .timer {
-  padding: 10vh;
+  padding: 10vh 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 25px;
 }
 
@@ -66,13 +66,33 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   position: relative;
+  min-width: calc(25px + 10vw);
 }
 
+@media (max-width: 400px) {
+  .description .timer {
+    gap: 0;
+    padding-top: 40px;
+  }
+
+  .timer-item {
+    min-width: calc(40px + 10vw);
+  }
+}
 
 .timer-item span {
   font-size: calc(1rem + 5vw);
   font-weight: 400;
 }
+
+/* .timer-item:not(:last-child)::after{
+  content: "";
+  background-color: #f1f5f8;
+  position: absolute;
+  right: -13px;
+  width: 2px;
+  height: 100%;
+} */
 
 
 
